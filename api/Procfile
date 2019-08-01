@@ -1,0 +1,1 @@
+web: python3 manage.py migrate && python3 manage.py collectstatic && python3 manage.py loaddata fixtures/* && gunicorn backend.wsgi:application --log-file -
