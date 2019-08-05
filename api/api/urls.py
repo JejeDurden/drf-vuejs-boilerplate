@@ -5,8 +5,8 @@ from api import views
 from backend import settings
 
 router = routers.DefaultRouter()
-router.register(r"offer", views.OfferViewSet)
-schema_view = get_swagger_view(title="Job offers")
+router.register(r"example", views.ExampleViewSet)
+schema_view = get_swagger_view(title="Example")
 
 app_name = "api"
 # Wire up our API using automatic URL routing.

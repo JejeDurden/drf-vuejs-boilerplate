@@ -17,7 +17,7 @@ shell:
 	python3 manage.py shell_plus --print-sql
 
 fake_db:
-	python3 manage.py seed --offers 20
+	python3 manage.py seed --example 20
 
 reset_fake_db:
 	make reset_db && make fake_db

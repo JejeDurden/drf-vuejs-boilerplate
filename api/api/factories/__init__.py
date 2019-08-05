@@ -1,1 +1,1 @@
-from api.factories.offer import *
+from api.factories.example import *
