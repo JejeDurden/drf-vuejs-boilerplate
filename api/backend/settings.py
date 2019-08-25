@@ -11,13 +11,16 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import django_heroku
 import warnings
+from datetime import timedelta
+
 import dj_database_url
+
+import django_heroku
+
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -47,7 +50,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "rest_framework_simplejwt.token_blacklist",
     "storages",
-    "rest_framework_swagger",
+    "drf_yasg",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -204,9 +207,7 @@ SECURE_SSL_REDIRECT = bool(os.environ.get("DJANGO_SSL_REDIRECT", False))
 
 # Amazon S3 bucket settings
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "access_key")
-AWS_SECRET_ACCESS_KEY = os.environ.get(
-    "AWS_SECRET_ACCESS_KEY", "secret_access_key"
-)
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", "secret_access_key")
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "bucket")
 AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}

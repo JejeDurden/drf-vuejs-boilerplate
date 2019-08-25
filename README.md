@@ -3,7 +3,7 @@
 ### Pre-integrated third parties
 
 - Djangosimplejwt : JWT library for django
-- Djangorestswagger : automated documentation for django with swagger
+- drf-yasg : Swagger/OpenAPI 2.0 specs from a Django Rest Framework API
 - AmazonS3
 - Flake8
 - Postgresql
@@ -39,8 +39,8 @@
 ### API Documentation
 
 - run `make runserver`
-- Go to `http://localhost:8000/docs/`
-- Click on `authorize` and write `Bearer someusertoken` to access documentation for routes protected by jwt
+- Go to `http://localhost:8000/redoc/` or `http://localhost:8000/swagger/`
+- Click on `authorize` and write `Bearer *someusertoken*` to use protected routes
 
 ### Useful Links
 

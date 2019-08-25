@@ -1,6 +1,6 @@
-from rest_framework import serializers
-
 from api.models import Example
+
+from rest_framework import serializers
 
 
 class ExampleSerializer(serializers.ModelSerializer):

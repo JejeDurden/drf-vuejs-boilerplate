@@ -1,9 +1,9 @@
+from api.models import Example
+from api.serializers import ExampleSerializer
+
 from rest_framework import viewsets
 from rest_framework.decorators import permission_classes
 from rest_framework.permissions import AllowAny
-
-from api.models import Example
-from api.serializers import ExampleSerializer
 
 
 @permission_classes((AllowAny,))
