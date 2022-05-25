@@ -87,7 +87,7 @@ Jinja2 = "==2.10.1"
 MarkupSafe = "==1.1.1"
 prompt_toolkit = "==2.0.9"
 Pygments = "==2.4.2"
-PyJWT = "==1.7.1"
+PyJWT = "==2.4.0"
 "ruamel.yaml" = "==0.16.5"
 "ruamel.yaml.clib" = "==0.1.2"
 
